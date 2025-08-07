@@ -93,7 +93,7 @@ class HackRxRequest(BaseModel):
     pdf_url: str
     query: str
 
-@app.post("/hackrx/run")
+@app.post("/api/v1/hackrx/run")
 async def run_hackrx(req: HackRxRequest):
     try:
         pdf_path = download_pdf(req.pdf_url)
